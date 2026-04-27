@@ -57,6 +57,11 @@ p {
   margin-bottom: 20px;
 color: #ccc
 }
+.microcopy {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 8px;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -84,6 +89,13 @@ color: #ccc
   h2 {
     font-size: 22px;
   }
+  @media (max-width: 768px) {
+
+  .microcopy {
+    font-size: 13px;
+  }
+
+}
   nav a {
     font-size: 16px;
   }
