@@ -83,6 +83,12 @@ color: #ccc
   nav a {
     font-size: 16px;
   }
+.whatsapp-float {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 16px;
+    font-size: 13px;
+}
 }
 .whatsapp-float {
   position: fixed;
