@@ -39,7 +39,7 @@ nav a {
 
 .btn:hover {
   background: #b00500;
-  colour: #ffffff
+  colour: #ffffff !important;
   padding: 12px 20px;
   display: inline-block;
   margin-top: 20px;
