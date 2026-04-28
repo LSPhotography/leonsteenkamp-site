@@ -9,15 +9,18 @@
 <body>
 
 <header>
-<div>LEON STEENKAMP MEDIA</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="photography.html">Photography</a>
-<a href="video.html">Video</a>
-<a href="content.html">Content</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <div class="logo">LEON STEENKAMP MEDIA</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="photography.html">Photography</a>
+    <a href="video.html">Video</a>
+    <a href="content.html">Content</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <div class="container">
@@ -52,6 +55,10 @@ with audiences and supports real communication goals.
 </a>
   
 <div class="footer">© Leon Steenkamp Media</div>
-
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
