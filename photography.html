@@ -5,94 +5,48 @@
 <title>Photography</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-<div>LEON STEENKAMP MEDIA</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="photography.html">Photography</a>
-<a href="video.html">Video</a>
-<a href="content.html">Content</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+<header> ...same nav... </header>
 
 <div class="container">
 <h1>Photography</h1>
-<p>
-Professional photography that goes beyond capturing moments. I focus on telling your story and strengthening your brand.
-</p>
+<p>Professional photography that strengthens your brand.</p>
+
 <div class="grid">
-  <img src="images/portrait1.jpg" onclick="openLightbox(0)">
-  <img src="images/portrait2.jpg" onclick="openLightbox(1)">
-  <img src="images/event1.jpg" onclick="openLightbox(2)">
-  <img src="images/event2.jpg" onclick="openLightbox(3)">
-  <img src="images/product.jpg" onclick="openLightbox(4)">
+<img src="images/portrait1.jpg" onclick="openLightbox(0)">
+<img src="images/portrait2.jpg" onclick="openLightbox(1)">
+<img src="images/event1.jpg" onclick="openLightbox(2)">
+<img src="images/event2.jpg" onclick="openLightbox(3)">
+<img src="images/product.jpg" onclick="openLightbox(4)">
 </div>
 </div>
-<section class="section container">
-  <h2>Need photography for your business or event?</h2>
-  <a class="btn" href="contact.html">Book a Shoot</a>
-</section>
 
 <div class="footer">© Leon Steenkamp Media</div>
 
 <div id="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>
-  <img id="lightbox-img">
-  <span class="prev" onclick="changeImage(-1)">&#10094;</span>
-  <span class="next" onclick="changeImage(1)">&#10095;</span>
+<span class="close" onclick="closeLightbox()">&times;</span>
+<img id="lightbox-img">
+<span class="prev" onclick="changeImage(-1)">&#10094;</span>
+<span class="next" onclick="changeImage(1)">&#10095;</span>
 </div>
 
-<a href="https://wa.me/270828573307" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <!-- SVG -->
-</a>
-  <script>
+<a href="https://wa.me/270828573307" class="whatsapp-float" target="_blank">...</a>
+
+<script>
 const images = [
-  "images/portrait1.jpg",
-  "images/portrait2.jpg",
-  "images/event1.jpg",
-  "images/event2.jpg",
-  "images/product.jpg"
+"images/portrait1.jpg",
+"images/portrait2.jpg",
+"images/event1.jpg",
+"images/event2.jpg",
+"images/product.jpg"
 ];
-
 let currentIndex = 0;
-
-function openLightbox(index) {
-  currentIndex = index;
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = images[currentIndex];
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-
-function changeImage(direction) {
-  currentIndex += direction;
-
-  if (currentIndex < 0) {
-    currentIndex = images.length - 1;
-  }
-
-  if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-
-  document.getElementById("lightbox-img").src = images[currentIndex];
-}
-
-// Keyboard support
-document.addEventListener("keydown", function(e) {
-  if (document.getElementById("lightbox").style.display === "flex") {
-    if (e.key === "ArrowRight") changeImage(1);
-    if (e.key === "ArrowLeft") changeImage(-1);
-    if (e.key === "Escape") closeLightbox();
-  }
-});
+function openLightbox(i){currentIndex=i;document.getElementById("lightbox").style.display="flex";document.getElementById("lightbox-img").src=images[i];}
+function closeLightbox(){document.getElementById("lightbox").style.display="none";}
+function changeImage(d){currentIndex=(currentIndex+d+images.length)%images.length;document.getElementById("lightbox-img").src=images[currentIndex];}
 </script>
+
 </body>
 </html>
-
