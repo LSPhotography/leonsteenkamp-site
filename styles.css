@@ -76,6 +76,14 @@ color: #ccc
   height: 350px;
   object-fit: cover;
 }
+.grid img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.02);
+}
 .footer {
   text-align: center;
   padding: 30px;
