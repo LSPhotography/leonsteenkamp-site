@@ -95,10 +95,10 @@ color: #ccc
     font-size: 34px;
   }
   h1 {
-    font-size: 28px
+    font-size: 30px
   }
   h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
   @media (max-width: 768px) {
 .prev, .next {
