@@ -36,23 +36,19 @@ Professional photography that goes beyond capturing moments. I focus on telling 
   <h2>Need photography for your business or event?</h2>
   <a class="btn" href="contact.html">Book a Shoot</a>
 </section>
-  
-<div class="container">...</div>
 
 <div class="footer">© Leon Steenkamp Media</div>
+
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img">
+  <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+  <span class="next" onclick="changeImage(1)">&#10095;</span>
+</div>
 
 <a href="https://wa.me/270828573307" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
   <!-- SVG -->
 </a>
-<div class="footer">© Leon Steenkamp Media</div>
-<div id="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>
-
-  <img id="lightbox-img">
-
-  <span class="prev" onclick="changeImage(-1)">&#10094;</span>
-  <span class="next" onclick="changeImage(1)">&#10095;</span>
-</div>
   <script>
 const images = [
   "images/portrait1.jpg",
