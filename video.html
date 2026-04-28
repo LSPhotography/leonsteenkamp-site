@@ -9,36 +9,79 @@
 <body>
 
 <header>
-<div>LEON STEENKAMP MEDIA</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="photography.html">Photography</a>
-<a href="video.html">Video</a>
-<a href="content.html">Content</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <div>LEON STEENKAMP MEDIA</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="photography.html">Photography</a>
+    <a href="video.html">Video</a>
+    <a href="content.html">Content</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <div class="container">
-<h1>Video Production</h1>
-<p>
-End-to-end video production, from concept to final edit—ideal for organisations, interviews, events, and online content.
-</p>
+  <h1>Video Production</h1>
+  <p>
+    Professional video content that communicates clearly, builds trust, and engages your audience.
+  </p>
 
-<div class="grid">
-<img src="images/video1.jpg">
-<img src="images/video2.jpg">
-<img src="images/video3.jpg">
+  <div class="grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/VIDEO_ID_1')">
+      <img src="images/video1.jpg">
+      <div class="play-button">▶</div>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/VIDEO_ID_2')">
+      <img src="images/video2.jpg">
+      <div class="play-button">▶</div>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/VIDEO_ID_3')">
+      <img src="images/video3.jpg">
+      <div class="play-button">▶</div>
+    </div>
+
+  </div>
 </div>
 
-</div>
 <section class="section container">
-  <h2>Need to capture the story of your business or event on film?</h2>
-  <a class="btn" href="contact.html">Book a Shoot</a>
+  <h2>Need video content for your business?</h2>
+  <a class="btn" href="contact.html">Start a Project</a>
 </section>
- <a href="https://wa.me/270828573307" class="whatsapp-float" target="_blank">...</a>
-<div class="footer">© Leon Steenkamp Media</div>
+
+<div class="footer">
+  © Leon Steenkamp Media
+</div>
+
+<!-- VIDEO LIGHTBOX -->
+<div id="video-lightbox" onclick="closeVideo()">
+  <iframe id="video-frame" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/270828573307" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor">
+    <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.2 4.8 1.8 7.7 1.8 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4z"/>
+  </svg>
+</a>
+
+<!-- SCRIPT -->
+<script>
+function openVideo(url) {
+  document.getElementById("video-lightbox").style.display = "flex";
+  document.getElementById("video-frame").src = url + "?autoplay=1";
+}
+
+function closeVideo() {
+  document.getElementById("video-lightbox").style.display = "none";
+  document.getElementById("video-frame").src = "";
+}
+</script>
 
 </body>
 </html>
