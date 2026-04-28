@@ -361,11 +361,13 @@ p {
 
   /* BUTTON */
   .btn {
-    width: 100%;
-    text-align: center;
-    padding: 18px;
+    display: block;
+   width: calc(100% - 40px);
+    margin: 25px auto 0;
+     text-align: center;
+    padding: 16px;
     font-size: 18px;
-    margin-top: 25px;
+  }
   }
 
   /* ABOUT */
