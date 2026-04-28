@@ -91,7 +91,12 @@ p {
 .hero h1 {
   font-size: clamp(50px, 9vw, 110px);
 }
-
+.hero-sub {
+  max-width: 500px;
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 18px;
+}
 /* =====================
    GRID (PHOTOS + VIDEOS)
 ===================== */
