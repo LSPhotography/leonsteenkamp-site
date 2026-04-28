@@ -240,8 +240,9 @@ p {
    TWO-COLUMN TEXT
 ===================== */
 .two-column {
-  column-count: 2;
-  column-gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   max-width: 900px;
 }
 
