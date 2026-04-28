@@ -73,14 +73,32 @@ nav a {
   display: flex;
   align-items: center;
 }
+/* GLOBAL TYPOGRAPHY SCALE */
 
+h1 {
+  font-size: clamp(48px, 8vw, 100px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
 .hero h1 {
-  font-size: clamp(40px, 7vw, 90px);
+  font-size: clamp(50px, 9vw, 110px);
   line-height: 1.1;
 }
 
 .section {
-  padding: 100px 20px;
+  padding: 70px 20px;
 }
 
 .grid {
