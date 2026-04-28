@@ -40,8 +40,13 @@ Professional photography that goes beyond capturing moments. I focus on telling 
   WhatsApp
 </a>
 <div class="footer">© Leon Steenkamp Media</div>
-<div id="lightbox" onclick="closeLightbox()">
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
   <img id="lightbox-img">
+
+  <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+  <span class="next" onclick="changeImage(1)">&#10095;</span>
 </div>
   <script>
 function openLightbox(img) {
