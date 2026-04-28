@@ -5,16 +5,6 @@
 <title>Photography</title>
 <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-</script>
 <body>
 
 <header>
@@ -53,6 +43,16 @@ Professional photography that goes beyond capturing moments. I focus on telling 
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
 </div>
+  <script>
+function openLightbox(img) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 </html>
 
