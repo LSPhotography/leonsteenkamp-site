@@ -18,7 +18,7 @@ body {
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 /* =====================
@@ -27,9 +27,19 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-align-items: center;
+  align-items: center;
   padding: 20px;
   border-bottom: 1px solid #222;
+  position: relative;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
 }
 
 nav a {
@@ -44,6 +54,13 @@ nav a {
 
 nav a:hover {
   color: #e10600;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* =====================
@@ -69,12 +86,10 @@ p {
   margin-bottom: 12px;
 }
 
-/* BIG STATEMENT TEXT */
 .big-text {
   font-size: clamp(36px, 6vw, 72px);
   line-height: 1.1;
   max-width: 900px;
-  margin-bottom: 20px;
 }
 
 /* =====================
@@ -88,21 +103,18 @@ p {
   padding: 0 20px;
 }
 
-.hero h1 {
-  font-size: clamp(50px, 9vw, 110px);
-}
 .hero-sub {
   max-width: 500px;
   margin-top: 15px;
   color: #ccc;
-  font-size: 18px;
 }
+
 /* =====================
-   GRID (PHOTOS + VIDEOS)
+   GRID
 ===================== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -119,11 +131,29 @@ p {
 }
 
 /* =====================
+   BUTTON
+===================== */
+.btn {
+  background: #e10600;
+  color: #fff;
+  padding: 14px 24px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #b00500;
+}
+
+/* =====================
    VIDEO
 ===================== */
 .video-item {
   position: relative;
-  cursor: pointer;
 }
 
 .video-item img {
@@ -138,60 +168,13 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  color: white;
   background: rgba(0,0,0,0.6);
   padding: 10px 20px;
   border-radius: 50%;
 }
 
-/* VIDEO LIGHTBOX */
-#video-lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.95);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-
-#video-frame {
-  width: 90%;
-  height: 60%;
-}
-
 /* =====================
-   BUTTON
-===================== */
-.btn {
-  background: #e10600;
-  color: #fff;
-  padding: 12px 20px;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background: #b00500;
-}
-
-/* =====================
-   FOOTER
-===================== */
-.footer {
-  text-align: center;
-  padding: 30px;
-  color: #777;
-}
-
-/* =====================
-   LIGHTBOX (PHOTOS)
+   LIGHTBOX
 ===================== */
 #lightbox {
   position: fixed;
@@ -231,7 +214,60 @@ p {
 .next { right: 20px; }
 
 /* =====================
-   WHATSAPP BUTTON
+   VIDEO LIGHTBOX
+===================== */
+#video-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#video-frame {
+  width: 90%;
+  height: 60%;
+}
+
+/* =====================
+   ABOUT PAGE
+===================== */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 850px;
+}
+
+.about-image {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about-closing {
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.1;
+  font-weight: 700;
+  max-width: 850px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+/* =====================
+   WHATSAPP
 ===================== */
 .whatsapp-float {
   position: fixed;
@@ -250,62 +286,92 @@ p {
 }
 
 /* =====================
-   TWO-COLUMN TEXT
-===================== */
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  max-width: 850px;
-}
-
-.two-column p {
-  break-inside: avoid;
-}
-
-/* =====================
    MOBILE
 ===================== */
 @media (max-width: 768px) {
 
-  .hero h1 {
-    font-size: 36px;
+  /* NAV */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px solid #222;
   }
 
   nav a {
-    font-size: 16px;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+    border-bottom: 1px solid #222;
   }
 
+  nav.active {
+    display: flex;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+    background-position: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  /* GRID */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid img {
+    height: auto;
+  }
+
+  /* BUTTON */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  /* ABOUT */
   .two-column {
     grid-template-columns: 1fr;
   }
 
+  /* VIDEO */
+  #video-frame {
+    height: 40%;
+  }
+
+  /* ARROWS */
   .prev, .next {
     font-size: 35px;
   }
 
-  #video-frame {
-    height: 40%;
+  /* WHATSAPP */
+  .whatsapp-float {
+    width: 65px;
+    height: 65px;
   }
-}
-/* ABOUT IMAGE (COLUMN INTEGRATION) */
-.about-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
-}
-/* =====================
-   ABOUT CLOSING TEXT
-===================== */
-.about-closing {
-  font-size: clamp(36px, 6vw, 72px);
-  line-height: 1.1;
-  font-weight: 700;
-  margin-top: 20px;
-  max-width: 850px;
-}
-.two-column > div {
-  min-width: 0;
 }
