@@ -209,6 +209,12 @@ font-size: 35px;
 .next {
   right: 20px;
 }
+.big-text {
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.1;
+  text-align: left;
+  max-width: 900px;
+}
 
 .prev:hover, .next:hover, .close:hover {
   color: #e10600;
