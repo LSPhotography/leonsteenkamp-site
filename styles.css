@@ -295,9 +295,9 @@ p {
    ABOUT CLOSING TEXT
 ===================== */
 .about-closing {
-  margin-top: -150px;
+  margin-top: 40px;
   font-size: clamp(36px, 6vw, 72px);
   line-height: 1.1;
   font-weight: 700;
-  max-width: 850px;
+  max-width: 90%;
 }
