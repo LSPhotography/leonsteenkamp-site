@@ -250,7 +250,7 @@ p {
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
   max-width: 850px;
 }
 
@@ -295,9 +295,14 @@ p {
    ABOUT CLOSING TEXT
 ===================== */
 .about-closing {
-  margin-top: 40px;
-  font-size: clamp(36px, 6vw, 72px);
+  margin-top: 30px;
+  font-size: clamp(32px, 5vw, 56px);
   line-height: 1.1;
   font-weight: 700;
-  max-width: 90%;
+   
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.two-column > div {
+  min-width: 0;
 }
