@@ -317,7 +317,21 @@ p {
   nav.active {
     display: flex;
   }
+@media (max-width: 768px) {
 
+  .container {
+    padding: 20px;
+  }
+
+  .grid {
+    gap: 15px;
+  }
+
+  .grid img {
+    border-radius: 4px; /* optional but nice */
+  }
+
+}
   /* HERO */
   .hero {
     height: auto;
@@ -347,12 +361,15 @@ p {
   }
 
   /* BUTTON */
+  @media (max-width: 768px) {
   .btn {
     width: 100%;
     text-align: center;
-    padding: 16px;
+    padding: 18px;
     font-size: 18px;
+    margin-top: 25px;
   }
+}
 
   /* ABOUT */
   .two-column {
