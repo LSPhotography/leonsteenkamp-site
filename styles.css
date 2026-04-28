@@ -1,3 +1,6 @@
+/* =====================
+   BASE
+===================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,19 +8,106 @@ body {
   color: #fff;
 }
 
+/* =====================
+   LAYOUT
+===================== */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 0 20px;
 }
 
+.section {
+  padding: 70px 20px;
+}
+
+/* =====================
+   HEADER / NAV
+===================== */
 header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   border-bottom: 1px solid #222;
 }
-/* VIDEO GRID */
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* =====================
+   TYPOGRAPHY
+===================== */
+h1 {
+  font-size: clamp(48px, 8vw, 100px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+/* BIG STATEMENT TEXT */
+.big-text {
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.1;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  height: 90vh;
+  background: url('images/hero.jpg') center 20% / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 9vw, 110px);
+}
+
+/* =====================
+   GRID (PHOTOS + VIDEOS)
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.02);
+}
+
+/* =====================
+   VIDEO
+===================== */
 .video-item {
   position: relative;
   cursor: pointer;
@@ -29,7 +119,6 @@ header {
   object-fit: cover;
 }
 
-/* PLAY BUTTON */
 .play-button {
   position: absolute;
   top: 50%;
@@ -60,65 +149,10 @@ header {
   width: 90%;
   height: 60%;
 }
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-}
 
-.hero {
-  height: 90vh;
-  background: url('images/hero.jpg') center 20% / cover no-repeat;
-  display: flex;
-  align-items: center;
-}
-/* GLOBAL TYPOGRAPHY SCALE */
-
-h1 {
-  font-size: clamp(48px, 8vw, 100px);
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.2;
-  font-weight: 600;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #ccc;
-}
-.hero h1 {
-  font-size: clamp(50px, 9vw, 110px);
-  line-height: 1.1;
-}
-
-.section {
-  padding: 70px 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
-}
-
-.grid img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.grid img:hover {
-  transform: scale(1.02);
-}
-
+/* =====================
+   BUTTON
+===================== */
 .btn {
   background: #e10600;
   color: #fff;
@@ -127,19 +161,25 @@ p {
   margin-top: 20px;
   text-decoration: none;
   font-weight: 600;
+  transition: background 0.2s ease;
 }
 
 .btn:hover {
   background: #b00500;
 }
 
+/* =====================
+   FOOTER
+===================== */
 .footer {
   text-align: center;
   padding: 30px;
   color: #777;
 }
 
-/* LIGHTBOX */
+/* =====================
+   LIGHTBOX (PHOTOS)
+===================== */
 #lightbox {
   position: fixed;
   top: 0;
@@ -177,7 +217,9 @@ p {
 .prev { left: 20px; }
 .next { right: 20px; }
 
-/* WHATSAPP BUTTON */
+/* =====================
+   WHATSAPP BUTTON
+===================== */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -194,8 +236,41 @@ p {
   z-index: 9999;
 }
 
-/* MOBILE */
+/* =====================
+   TWO-COLUMN TEXT
+===================== */
+.two-column {
+  column-count: 2;
+  column-gap: 40px;
+  max-width: 900px;
+}
+
+.two-column p {
+  break-inside: avoid;
+}
+
+/* =====================
+   MOBILE
+===================== */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 36px; }
-  nav a { font-size: 16px; }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .two-column {
+    column-count: 1;
+  }
+
+  .prev, .next {
+    font-size: 35px;
+  }
+
+  #video-frame {
+    height: 40%;
+  }
 }
