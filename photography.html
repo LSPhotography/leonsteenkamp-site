@@ -49,14 +49,48 @@ Professional photography that goes beyond capturing moments. I focus on telling 
   <span class="next" onclick="changeImage(1)">&#10095;</span>
 </div>
   <script>
-function openLightbox(img) {
+const images = [
+  "images/portrait1.jpg",
+  "images/portrait2.jpg",
+  "images/event1.jpg",
+  "images/event2.jpg",
+  "images/product.jpg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
   document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox-img").src = images[currentIndex];
 }
 
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
+
+function changeImage(direction) {
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+// Keyboard support
+document.addEventListener("keydown", function(e) {
+  if (document.getElementById("lightbox").style.display === "flex") {
+    if (e.key === "ArrowRight") changeImage(1);
+    if (e.key === "ArrowLeft") changeImage(-1);
+    if (e.key === "Escape") closeLightbox();
+  }
+});
 </script>
 </body>
 </html>
