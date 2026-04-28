@@ -317,21 +317,16 @@ p {
   nav.active {
     display: flex;
   }
-@media (max-width: 768px) {
 
+  /* LAYOUT */
   .container {
     padding: 20px;
   }
 
-  .grid {
-    gap: 15px;
+  .section {
+    padding: 50px 20px;
   }
 
-  .grid img {
-    border-radius: 4px; /* optional but nice */
-  }
-
-}
   /* HERO */
   .hero {
     height: auto;
@@ -339,8 +334,10 @@ p {
     background-position: center;
   }
 
+  /* TYPOGRAPHY */
   h1 {
     font-size: 36px;
+    margin-bottom: 20px;
   }
 
   h2 {
@@ -354,14 +351,15 @@ p {
   /* GRID */
   .grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .grid img {
     height: auto;
+    border-radius: 4px;
   }
 
   /* BUTTON */
-  @media (max-width: 768px) {
   .btn {
     width: 100%;
     text-align: center;
@@ -369,7 +367,6 @@ p {
     font-size: 18px;
     margin-top: 25px;
   }
-}
 
   /* ABOUT */
   .two-column {
