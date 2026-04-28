@@ -9,8 +9,11 @@
 <body>
 
 <header>
-  <div>LEON STEENKAMP MEDIA</div>
-  <nav>
+  <div class="logo">LEON STEENKAMP MEDIA</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="photography.html">Photography</a>
     <a href="video.html">Video</a>
@@ -95,6 +98,10 @@ document.addEventListener("keydown", function(e) {
   }
 });
 </script>
-
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
