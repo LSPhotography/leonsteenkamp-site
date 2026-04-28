@@ -133,14 +133,15 @@ font-size: 35px;
   align-items: center;
   justify-content: center;
   color: #25D366;
+  text-decoration: none;
   z-index: 9999;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 }
 .whatsapp-float:hover {
-  background: #25D366
+  background: #25D366;
   color: #000;
-  transform: translateY(-2px);
-  background: #1ebe5d;
+  transform: scale(1.05);
 }
 .microcopy {
   font-size: 14px;
