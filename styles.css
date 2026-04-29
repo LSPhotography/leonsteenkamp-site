@@ -524,3 +524,16 @@ textarea.form-input {
   font-size: 14px;
   color: #888;
 }
+.contact-trust {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #777;
+  border-top: 1px solid #222;
+}
