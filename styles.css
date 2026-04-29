@@ -486,4 +486,17 @@ textarea.form-input {
   height: 120px;
   resize: vertical;
 }
+.alt-contact {
+  margin-top: 30px;
+}
+
+.alt-contact p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+.contact-trust {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+}
 }
