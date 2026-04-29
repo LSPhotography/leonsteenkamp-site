@@ -22,9 +22,8 @@ body {
 }
 
 /* =====================
-   HEADER / NAV (REFINED)
+   HEADER / NAV
 ===================== */
-
 header {
   backdrop-filter: blur(6px);
   display: flex;
@@ -34,7 +33,6 @@ header {
   border-bottom: 1px solid #222;
 }
 
-/* LOGO */
 .logo {
   text-decoration: none;
   color: #fff;
@@ -48,7 +46,6 @@ header {
   color: #e10600;
 }
 
-/* NAV */
 nav {
   display: flex;
   align-items: center;
@@ -59,25 +56,6 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #e10600;
-}
-
-/* NAV LINKS */
-nav {
-  display: flex;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.2s ease;
@@ -127,7 +105,7 @@ p {
    HERO
 ===================== */
 .hero {
-  height: 90vh;
+  min-height: 90vh;
   background: url('images/hero.jpg') center 20% / cover no-repeat;
   display: flex;
   align-items: center;
@@ -145,7 +123,7 @@ p {
 ===================== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -162,7 +140,7 @@ p {
 }
 
 /* =====================
-   BUTTON
+   BUTTONS
 ===================== */
 .btn {
   background: #e10600;
@@ -195,11 +173,13 @@ p {
 .btn-outline:hover {
   background: #e10600;
 }
+
 /* =====================
    VIDEO
 ===================== */
 .video-item {
   position: relative;
+  cursor: pointer;
 }
 
 .video-item img {
@@ -222,7 +202,8 @@ p {
 /* =====================
    LIGHTBOX
 ===================== */
-#lightbox {
+#lightbox,
+#video-lightbox {
   position: fixed;
   top: 0;
   left: 0;
@@ -238,6 +219,11 @@ p {
 #lightbox img {
   max-width: 90%;
   max-height: 85%;
+}
+
+#video-frame {
+  width: 90%;
+  height: 60%;
 }
 
 .close {
@@ -260,28 +246,7 @@ p {
 .next { right: 20px; }
 
 /* =====================
-   VIDEO LIGHTBOX
-===================== */
-#video-lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.95);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-
-#video-frame {
-  width: 90%;
-  height: 60%;
-}
-
-/* =====================
-   ABOUT PAGE
+   ABOUT
 ===================== */
 .two-column {
   display: grid;
@@ -304,12 +269,82 @@ p {
 }
 
 /* =====================
+   CONTACT FORM
+===================== */
+form {
+  margin-top: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #e10600;
+}
+
+textarea.form-input {
+  height: 120px;
+  resize: vertical;
+}
+
+select.form-input {
+  appearance: none;
+  background: #111;
+  color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='10' viewBox='0 0 24 24' width='10'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+/* =====================
+   TESTIMONIALS
+===================== */
+.testimonial {
+  margin-top: 40px;
+  max-width: 700px;
+  border-left: 3px solid #e10600;
+  padding-left: 20px;
+}
+
+.quote {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #fff;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* =====================
    FOOTER
 ===================== */
 .footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px 20px;
   color: #777;
+  border-top: 1px solid #222;
+}
+
+.contact-trust {
+  font-size: 14px;
+  color: #777;
+  margin: 30px 0 20px;
+  max-width: 500px;
 }
 
 /* =====================
@@ -329,17 +364,11 @@ p {
   justify-content: center;
   color: #25D366;
   z-index: 9999;
-} 
+}
+
 .whatsapp-float svg {
   width: 22px;
   height: 22px;
-  display: block;
-}
-   /* DESKTOP GRID FIX */
-@media (min-width: 769px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 /* =====================
@@ -347,7 +376,6 @@ p {
 ===================== */
 @media (max-width: 768px) {
 
-  /* HEADER */
   header {
     padding: 18px 20px;
   }
@@ -358,8 +386,6 @@ p {
 
   .menu-toggle {
     display: block;
-    font-size: 28px;
-    cursor: pointer;
   }
 
   nav {
@@ -384,7 +410,6 @@ p {
     display: flex;
   }
 
-  /* LAYOUT */
   .container {
     padding: 20px;
   }
@@ -393,40 +418,24 @@ p {
     padding: 50px 20px;
   }
 
-  /* HERO */
   .hero {
-    height: auto;
+    min-height: auto;
     padding: 80px 20px;
-    background-position: center;
   }
 
-  /* TYPOGRAPHY */
-  h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
+  h1 { font-size: 36px; }
+  h2 { font-size: 26px; }
+  p { font-size: 17px; }
 
-  h2 {
-    font-size: 26px;
-  }
-
-  p {
-    font-size: 17px;
-  }
-
-  /* GRID */
   .grid {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
   }
 
   .grid img {
-    width: 100%;
     height: auto;
   }
 
-  /* BUTTON */
   .btn {
     display: block;
     width: calc(100% - 40px);
@@ -436,104 +445,16 @@ p {
     text-align: center;
   }
 
-  /* ABOUT */
   .two-column {
     grid-template-columns: 1fr;
   }
 
-  /* VIDEO */
   #video-frame {
     height: 40%;
   }
 
-  /* WHATSAPP */
   .whatsapp-float {
     width: 65px;
     height: 65px;
   }
-}
-   /* =====================
-   CONTACT FORM
-===================== */
-form {
-  margin-top: 20px;
-}
-.form-input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  background: #111;
-  border: 1px solid #333;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 4px;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.form-input:focus {
-  border-color: #e10600;
-}
-select.form-input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: #111;
-  color: #fff;
-}
-select.form-input {
-  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='10' viewBox='0 0 24 24' width='10'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 12px;
-}
-/* TEXTAREA */
-textarea.form-input {
-  height: 120px;
-  resize: vertical;
-}
-.alt-contact {
-  margin-top: 30px;
-}
-
-.alt-contact p {
-  margin-bottom: 10px;
-  color: #ccc;
-}
-.contact-trust {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #777;
-}
-.testimonial {
-  margin-top: 40px;
-  max-width: 700px;
-  border-left: 3px solid #e10600;
-  padding-left: 20px;
-}
-
-.quote {
-  font-size: 22px;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #fff;
-}
-
-.author {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #888;
-}
-.contact-trust {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 20px;
-  max-width: 500px;
-}
-
-.footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: #777;
-  border-top: 1px solid #222;
 }
