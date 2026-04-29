@@ -34,7 +34,12 @@ header {
 }
 
 .logo {
+  text-decoration: none;
+  color: #fff;
   font-weight: 600;
+   
+.logo:hover {
+  color: #e10600;
 }
 
 /* NAV LINKS */
