@@ -180,6 +180,15 @@ p {
   background: #b00500;
 }
 
+.btn-outline {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: 1px solid #e10600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
 /* =====================
    VIDEO
 ===================== */
