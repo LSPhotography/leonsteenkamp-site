@@ -468,7 +468,19 @@ form {
 .form-input:focus {
   border-color: #e10600;
 }
-
+select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #111;
+  color: #fff;
+}
+select.form-input {
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='10' viewBox='0 0 24 24' width='10'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
 /* TEXTAREA */
 textarea.form-input {
   height: 120px;
