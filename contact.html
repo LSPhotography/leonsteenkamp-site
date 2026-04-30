@@ -23,9 +23,9 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-</dev>
 
 <div class="container">
+
 <h1>Start a Project</h1>
 
 <p class="contact-intro">
@@ -39,45 +39,75 @@ Tell me what you need, and I’ll come back to you with a clear next step.
 
 <label>Email</label>
 <input type="email" name="email" class="form-input">
+
 <select name="service" class="form-input">
   <option value="">What do you need?</option>
   <option>Photography</option>
   <option>Video</option>
   <option>Content Creation</option>
 </select>
-  <select name="budget" class="form-input">
+
+<select name="budget" class="form-input">
   <option value="">Budget range (optional)</option>
   <option>R3,000 – R5,000</option>
   <option>R5,000 – R10,000</option>
   <option>R10,000+</option>
 </select>
+
 <label>Project Details</label>
 <textarea name="message" class="form-input"></textarea>
 
 <button class="btn">Send Project Enquiry</button>
-  
+
 </form>
+
 <p class="microcopy">
   I typically respond within 24 hours with a free quote.
 </p>
-  <p class="contact-note">
+
+<p class="contact-note">
   Projects typically start from R3 000 depending on scope. I’ll guide you on the best approach based on your needs. Availability is limited each month.
 </p>
-  <div class="alt-contact">
+
+<!-- ✅ CLEAN WHATSAPP CTA -->
+<div class="alt-contact">
   <p>Prefer a quick chat?</p>
+
   <a href="https://wa.me/270828573307?text=Hi%20Leon,%20I%27m%20interested%20in%20your%20services.%20Can%20we%20chat%20about%20a%20project?" 
+     class="btn-outline" 
+     target="_blank">
+    Message me on WhatsApp
+  </a>
+</div>
+
+<p class="contact-trust">
+  More than two decades of experience in media, storytelling, and content production.
+</p>
+
+</div>
+
+<div class="footer">
+  Leon Steenkamp Media<br>
+  A division of Leon Steenkamp Photography (Pty) Ltd
+</div>
+
+<!-- ✅ KEEP FLOATING BUTTON SEPARATE -->
+<a href="https://wa.me/270828573307?text=Hi%20Leon,%20I%27m%20interested%20in%20your%20services.%20Can%20we%20chat%20about%20a%20project?" 
    class="whatsapp-float" 
    target="_blank" 
    aria-label="Chat on WhatsApp">
-</div>
-  <p class="contact-trust">
-  More than two decades of experience in media, storytelling, and content production.
-</p>
-<div class="footer">© Leon Steenkamp Media</div>
-  <script>
+
+  <svg viewBox="0 0 32 32" fill="currentColor">
+    <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.4 31.6l7.9-2.1c2.3 1.2 4.8 1.8 7.7 1.8 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4z"/>
+  </svg>
+
+</a>
+
+<script>
 function toggleMenu() {
   document.getElementById("nav-menu").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
