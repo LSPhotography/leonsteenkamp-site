@@ -365,13 +365,15 @@ select.form-input {
   color: #25D366;
   z-index: 9999;
 }
-
+.whatsapp-float img {
+  width: 26px;
+  height: 26px;
+}
 .whatsapp-float svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
   display: block;
-
 }
 
 /* =====================
