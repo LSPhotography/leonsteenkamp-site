@@ -20,7 +20,11 @@ body {
 .section {
   padding: 90px 20px;
 }
-
+.section-intro {
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
 /* =====================
    HEADER / NAV
 ===================== */
