@@ -18,7 +18,7 @@ body {
 }
 
 .section {
-  padding: 90px 20px;
+  padding: 100px 20px;
 }
 .section-intro {
   max-width: 600px;
@@ -148,7 +148,43 @@ p {
 .grid img:hover {
   transform: scale(1.02);
 }
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
+/* FEATURED IMAGE */
+.premium-grid .featured {
+  grid-column: span 2;
+}
+
+.premium-grid .featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* STANDARD IMAGES */
+.premium-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+}
+   /* PORTRAIT */
+.portrait-grid img {
+  aspect-ratio: 3 / 4;
+}
+
+/* LANDSCAPE */
+.landscape-grid img {
+  aspect-ratio: 4 / 3;
+}
+.premium-grid img:hover {
+  transform: scale(1.03);
+}
 /* =====================
    BUTTONS
 ===================== */
