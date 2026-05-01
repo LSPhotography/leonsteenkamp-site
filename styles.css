@@ -356,13 +356,13 @@ select.form-input {
   right: 20px;
   width: 55px;
   height: 55px;
-  background: #000;
-  border: 2px solid #25D366;
+  background: #25D366;
+  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #25D366;
+  color: #fff;
   z-index: 9999;
 }
 .whatsapp-float img {
