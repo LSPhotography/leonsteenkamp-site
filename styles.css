@@ -133,10 +133,16 @@ p {
 
 .grid img {
   width: 100%;
-  height: 300px;
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.2s ease;
+.portrait-grid img
+   aspect-ratio: 3 / 4;
+}
+
+/* LANDSCAPE */
+.landscape-grid img {
+  aspect-ratio: 4 / 3;
 }
 
 .grid img:hover {
