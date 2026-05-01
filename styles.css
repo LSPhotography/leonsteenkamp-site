@@ -364,6 +364,9 @@ select.form-input {
   justify-content: center;
   color: #25D366;
   z-index: 9999;
+   transition: transform .2s ease;
+}
+.whatsapp-float:hover {
 }
 .whatsapp-float img {
   width: 26px;
@@ -450,10 +453,5 @@ select.form-input {
 
   #video-frame {
     height: 40%;
-  }
-
-  .whatsapp-float {
-    width: 65px;
-    height: 65px;
   }
 }
