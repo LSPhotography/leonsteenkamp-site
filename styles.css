@@ -480,6 +480,14 @@ select.form-input {
     gap: 15px;
   }
 
+  .premium-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-grid .featured {
+    grid-column: span 1;
+  }
+
   .grid img {
     height: auto;
   }
